@@ -1,6 +1,6 @@
 {
   "name": "@tarikyildizci/react-utils",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Miscellaneous utilities for react projects",
   "license": "MIT",
   "scripts": {
@@ -13,7 +13,6 @@
     "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm --profile=node16",
     "ci": "yarn build && yarn check-format && yarn check-exports && yarn test",
     "prepublishOnly": "yarn ci",
-    "changeset": "changeset",
     "local-release": "changeset version && changeset publish"
   },
   "keywords": [
@@ -33,7 +32,6 @@
     "dist"
   ],
   "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -44,6 +42,11 @@
       "types": "./dist/utils/useDebounce/useDebounce.d.ts",
       "import": "./dist/utils/useDebounce/useDebounce.js",
       "default": "./dist/utils/useDebounce/useDebounce.js"
+    },
+    "./useDebouncedState": {
+      "types": "./dist/utils/useDebouncedState/useDebouncedState.d.ts",
+      "import": "./dist/utils/useDebouncedState/useDebouncedState.js",
+      "default": "./dist/utils/useDebouncedState/useDebouncedState.js"
     }
   },
   "type": "module",
