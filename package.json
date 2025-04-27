@@ -1,0 +1,66 @@
+{
+  "name": "@tarikyildizci/react-utils",
+  "version": "0.1.0",
+  "description": "Miscellaneous utilities for react projects",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --p tsconfig.build.json",
+    "type-check": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "format": "prettier --write .",
+    "check-format": "prettier --check .",
+    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm --profile=node16",
+    "ci": "yarn build && yarn check-format && yarn check-exports && yarn test",
+    "prepublishOnly": "yarn ci",
+    "changeset": "changeset",
+    "local-release": "changeset version && changeset publish"
+  },
+  "keywords": [
+    "util",
+    "typescript"
+  ],
+  "homepage": "https://github.com/tarikyildizci/react-utils",
+  "bugs": {
+    "url": "https://github.com/tarikyildizci/react-utils/issues"
+  },
+  "author": "Tarık Yusuf Yıldızcı <tarikyyildizci@gmail.com> (https://tarikyildizci.com)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tarikyildizci/react-utils.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./useDebounce": {
+      "types": "./dist/utils/useDebounce/useDebounce.d.ts",
+      "import": "./dist/utils/useDebounce/useDebounce.js",
+      "default": "./dist/utils/useDebounce/useDebounce.js"
+    }
+  },
+  "type": "module",
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.17.4",
+    "@changesets/cli": "^2.29.2",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.3.0",
+    "@types/react": "^19.1.2",
+    "jsdom": "^26.1.0",
+    "prettier": "^3.5.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.2"
+  },
+  "peerDependencies": {
+    "react": "^19.1.0"
+  }
+}
