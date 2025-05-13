@@ -64,3 +64,11 @@ const [value, setValue, debouncedValue, reset] = useDebouncedState('', 300, afte
   onChange={(e) => setValue(e.target.value)}
 />
 ```
+
+# Local Development (notes for myself)
+
+Run `yarn changeset` to create a new changeset.
+
+Run `yarn changeset version` to bump the version.
+
+Run `yarn changeset publish` to publish the changeset.
