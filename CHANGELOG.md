@@ -1,5 +1,11 @@
 # @tarikyildizci/react-utils
 
+## 0.2.2
+
+### Patch Changes
+
+- 21e4b7e: empty patch fix
+
 ## 0.2.1
 
 ### Patch Changes
