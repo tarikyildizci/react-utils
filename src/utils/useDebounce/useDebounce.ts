@@ -10,8 +10,8 @@ import { useCallback, useEffect, useRef } from 'react'
  * debouncedChange();
  */
 
-export function useDebounce<T>(
-  effect: (...args: Array<T>) => unknown,
+export function useDebounce<T extends unknown[]>(
+  effect: (...args: T) => unknown,
   delay: number,
 ) {
   const timeoutRef = useRef<NodeJS.Timeout | null>(null)
@@ -26,7 +26,7 @@ export function useDebounce<T>(
   }, [])
 
   const debounce = useCallback(
-    (...args: Array<T>) => {
+    (...args: T) => {
       // Clear the previous timeout when debounce is called again
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current)
