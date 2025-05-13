@@ -1,5 +1,11 @@
 # @tarikyildizci/react-utils
 
+## 0.2.1
+
+### Patch Changes
+
+- b3f361f: Fixed useDebounce fn type to allow multiple arguements of different type to be passed
+
 ## 0.2.0
 
 ### Minor Changes
